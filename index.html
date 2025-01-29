@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cool Website</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <header>
+
+        </header>
+        <h1>Welcome to My Cool Website</h1>
+        <p>Enjoy the fun animations and styles!</p>
+        <button class="click-me-button">Click Me!</button>
+        <script>
+            function createExplosion() {
+                var explosion = document.createElement("img");
+                explosion.src = "./images/explosion.png";
+                explosion.style.position = "absolute";
+                explosion.style.top = "50%";
+                explosion.style.left = "50%";
+                explosion.style.transform = "translate(-50%, -50%)";
+                explosion.style.width = "987px";
+                explosion.style.height = "459px";
+                explosion.style.opacity = "1";
+                explosion.style.transition = "opacity 1s ease-out";
+                document.body.appendChild(explosion);
+
+                setTimeout(function() {
+                    explosion.style.opacity = "0";
+                }, 100);
+
+                setTimeout(function() {
+                    document.body.removeChild(explosion);
+                }, 1100);
+            }
+
+            document.querySelector(".click-me-button").addEventListener("click", createExplosion);
+        </script>
+
+        <div class="content">
+            <h2>About This Site</h2>
+            <p>This website is a demonstration of cool animations and styles using HTML and CSS.</p>
+        </div>
+
+        <div class="images">
+            <a href="./pages/chood.html"><img class="chood" src="./images/chood.png"></a>
+            <a href="./pages/crimson-chin.html"><img class="crimson-chin" src="./images/Crimson-Chin.png"></a>
+            <a href="./pages/meow-2.html"><img class="meow-2" src="./images/meow-2.png"></a>
+            <a href="./pages/meow.html"><img class="meow" src="./images/meow.png"></a>
+        </div>
+        
+        <h3>Connect with Me</h3>
+        <div class="contacts">
+            <a href="https://x.com/robopogg" target="_blank"><img class="twitter" src="./icons/twitter_icon.png"></a>
+            <a href="https://www.snapchat.com/explore/jooshuamm" target="_blank"><img class="snapchat" src="./icons/snapchat_icon.png"></a>
+            <a href="https://www.instagram.com/joshmmilstein/" target="_blank"><img class="instagram" src="./icons/instagram_icon.jpeg"></a>
+            <a href="https://www.youtube.com/@Robopog" target="_blank"><img class="youtube" src="./icons/youtube_icon.png"></a>
+            <a href="https://www.twitch.tv/robopogtwitch" target="_blank"><img class="twitch" src="./icons/twitch_icon.png"></a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Cool Website. All rights reserved.</p>
+        </div>
+    </body>
+</html>

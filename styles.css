@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, rgb(0, 255, 170), #4a90e2);
+    color: white;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    margin-top: 50px;
+    font-size: 3em;
+    animation: fadeIn 2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0;
+}
+
+p {
+    font-size: 1.5em;
+    animation: slideIn 2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 100px; 
+}
+
+.click-me-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #4a90e2;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.click-me-button:hover {
+    background: #f06;
+    transform: scale(1.1);
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+    font-size: 1em;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    color: white;
+}
+
+.footer a {
+    color: #4a90e2;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding-bottom: 50px;
+    animation: rotateIn 1s ease-in-out;
+}
+
+.images img {
+    max-width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    object-fit: cover;
+}
+
+.images img:hover {
+    transform: scale(1.1);
+}
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.contacts img {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.contacts img:hover {
+    transform: scale(1.1);
+    border-color: #000;
+}
+
+/* Keyframes */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes rotateIn {
+    from {
+        transform: rotate(-360deg);
+        opacity: 0;
+    }
+    to {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
